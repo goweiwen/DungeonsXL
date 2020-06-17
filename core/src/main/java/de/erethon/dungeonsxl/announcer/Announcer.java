@@ -439,7 +439,13 @@ public class Announcer {
      * @return the matching DGroup
      */
     public DGroup getDGroupByButton(ItemStack button) {
-        int index = buttons.indexOf(button);
+        int index = 0;
+        for (ItemStack other : buttons) {
+            if (other.getType() == button.getType()) {
+                break;
+            }
+            index++;
+        }
         if (dGroups.size() <= index || index < 0) {
             return null;
         } else {
