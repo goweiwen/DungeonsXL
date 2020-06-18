@@ -636,6 +636,7 @@ public class DGroup implements PlayerGroup {
 
         Game game = getGame();
         removeUnplayedFloor((DResourceWorld) gameWorld.getResource(), false);
+        GameWorld oldWorld = gameWorld;
         GameWorld gameWorld = newFloor.instantiateGameWorld(true);
         gameWorld.setType(type);
         this.gameWorld = gameWorld;
@@ -650,6 +651,7 @@ public class DGroup implements PlayerGroup {
             player.setFinished(false);
         }
         startGame(game);
+        oldWorld.delete();
     }
 
     @Override
