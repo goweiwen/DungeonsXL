@@ -52,6 +52,10 @@ public abstract class DInstancePlayer extends DGlobalPlayer implements InstanceP
         return instanceWorld;
     }
 
+    public void setInstanceWorld(InstanceWorld world) {
+        instanceWorld = world;
+    }
+
     @Override
     public World getWorld() {
         return instanceWorld.getWorld();
