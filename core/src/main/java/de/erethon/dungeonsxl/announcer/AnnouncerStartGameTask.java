@@ -51,7 +51,7 @@ public class AnnouncerStartGameTask extends BukkitRunnable {
                 players.add(player);
             }
         }
-        bar = new ProgressBar(players, 30);
+        bar = new ProgressBar(players, 120);
         bar.send(plugin);
     }
 

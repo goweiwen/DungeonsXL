@@ -389,7 +389,7 @@ public class Announcer {
         if (areRequirementsFulfilled()) {
             if (startTask == null) {
                 startTask = new AnnouncerStartGameTask(plugin, this);
-                startTask.runTaskLater(plugin, 20 * 30L);
+                startTask.runTaskLater(plugin, 20 * 120L);
             } else {
                 startTask.getProgressBar().addPlayer(player);
             }
